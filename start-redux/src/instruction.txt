@@ -1,0 +1,29 @@
+1. npm i redux react-redux
+2. создать store (index.js)
+3. связать созданный store с App (через Provider в index.js)
+4. Создать UsersContainer и UserCard 
+5. отрисовать карточки пользователей в UsersContainer =>
+  - создать usersReducer, в качестве изначального состояния поместить usersData
+  - добавить usersReducer в rootReducer
+  - в UsersContainer обратиться к состоянию в usersReducer (через useSelector)
+  - из состояния отрисовать карточки
+6. удалять карточку при клике на крестик:
+  - создать deleteUserAction
+  - прописать логику для deleteUserAction в usersReducer
+  - создать dispatch (через useDispatch)
+  - вызвать deleteUserAction (используя dispatch) при клике на крестик
+7. Создать форму AddUsersForm (firstname, age + button). Добавить AddUsersForm в App. При сабмите формы создается объект и выводит в консоль.
+
+пример объекта
+
+{
+  id: unique,
+  firstname: input1.value,
+  age: input2.value
+}
+
+8. При сабмите формы добавлять карточку пользователя:
+  - создать addUserAction
+  - прописать логику для addUserAction в usersReducer
+  - создать dispatch (через useDispatch)
+  - вызвать addUserAction (используя dispatch) при клике на крестик
